@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — NovaAI</title><link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+<header class="nav">
+  <a class="logo" href="/">⚡ NovaAI</a>
+  <nav>
+    <span class="badge ok" id="credits-badge">— crédits</span>
+    <a href="/admin.html" id="admin-link" class="hidden">Admin</a>
+    <a href="/" id="logout">Déconnexion</a>
+  </nav>
+</header>
+<div class="grid">
+  <div class="card"><h3>🎨 Générateur d'images</h3><textarea id="img-prompt" rows="2" placeholder="Décrivez l'image…"></textarea><button class="btn generate" data-tool="image" data-cost="10">Générer (10 crédits)</button><div class="output" id="out-image"></div></div>
+  <div class="card"><h3>✍️ Rédaction IA</h3><textarea id="text-prompt" rows="2" placeholder="Sujet du texte…"></textarea><button class="btn generate" data-tool="text" data-cost="5">Générer (5 crédits)</button><div class="output" id="out-text"></div></div>
+  <div class="card"><h3>📝 Résumé</h3><textarea id="summary-input" rows="2" placeholder="Texte long…"></textarea><button class="btn generate" data-tool="summary" data-cost="3">Résumer (3 crédits)</button><div class="output" id="out-summary"></div></div>
+  <div class="card"><h3>🎙️ Voice-over IA</h3><textarea id="voice-input" rows="2" placeholder="Texte à lire…"></textarea><button class="btn generate" data-tool="voice" data-cost="8">Générer (8 crédits)</button><div class="output" id="out-voice"></div></div>
+  <div class="card"><h3>💻 Assistant code</h3><textarea id="code-input" rows="2" placeholder="Fonction souhaitée…"></textarea><button class="btn generate" data-tool="code" data-cost="5">Générer (5 crédits)</button><div class="output" id="out-code"></div></div>
+  <div class="card"><h3>💳 Abonnement</h3><p id="plan-info" style="color:var(--muted)">Plan : —</p>
+    <button class="btn subscribe" data-plan="starter">Starter 9€</button>
+    <button class="btn subscribe" data-plan="pro">Pro 29€</button>
+    <button class="btn subscribe" data-plan="business">Business 99€</button>
+    <button class="btn secondary" id="btn-billing">Gérer l'abonnement</button>
+  </div>
+</div>
+</div>
+<script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>

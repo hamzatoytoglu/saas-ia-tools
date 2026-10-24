@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connexion — NovaAI</title><link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+<header class="nav"><a class="logo" href="/">⚡ NovaAI</a></header>
+<form class="form card" id="auth-form">
+  <h2 id="form-title">Connexion</h2>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Mot de passe" minlength="8" required>
+  <button class="btn" type="submit" id="submit-btn">Se connecter</button>
+  <p style="color:var(--muted);font-size:.9rem"><a href="#" id="toggle">Pas de compte ? S'inscrire</a></p>
+  <p class="output" id="auth-msg" style="display:none"></p>
+</form>
+</div>
+<script type="module" src="/js/auth.js"></script>
+</body>
+</html>
